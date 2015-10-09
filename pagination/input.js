@@ -41,10 +41,14 @@
 	}
 
 	function calcCurrentPage(oSettings) {
+		oSettings._iDisplayStart = parseInt(oSettings._iDisplayStart);
+		oSettings._iDisplayLength = parseInt(oSettings._iDisplayLength);
 		return Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
 	}
 
 	function calcPages(oSettings) {
+		oSettings._iDisplayStart = parseInt(oSettings._iDisplayStart);
+		oSettings._iDisplayLength = parseInt(oSettings._iDisplayLength);
 		return Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength);
 	}
 
